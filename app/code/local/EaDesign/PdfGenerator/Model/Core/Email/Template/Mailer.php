@@ -37,7 +37,7 @@ class EaDesign_PdfGenerator_Model_Core_Email_Template_Mailer extends Mage_Core_M
         $storeId = $this->getStoreId();
         $templateParams = $this->getTemplateParams();
 
-        if ($templateParams['invoice'])
+        if (isset($templateParams['invoice']))
         {
             Mage::dispatchEvent(
                     'eadesign_pdfgenerator_before_send_invoice', array(
